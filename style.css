@@ -94,17 +94,16 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 .hero-inner {
   position: absolute;
   top: 0; left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   z-index: 2;
   padding-top: 3rem;
   text-align: center;
-  animation: fade-up 1s ease both;
+  animation: hero-fade-up 1s ease both;
 }
 
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translate(-50%, 14px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
 }
 
 .hero h1 {
@@ -151,36 +150,90 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   background: rgba(255,255,255,0.12);
 }
 
-.hero-nav {
+.hero-cards {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 780px;
   z-index: 2;
+  padding: 1.5rem 1.5rem 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+
+.hero-cards a {
+  display: block;
+  padding: 0.9rem 1rem;
+  background: rgba(10, 9, 7, 0.45);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(245, 243, 236, 0.25);
+  border-radius: 2px;
   text-align: center;
-  padding: 1.4rem 1rem 1.8rem;
-  font-variant: small-caps;
-  letter-spacing: 0.1em;
-  font-size: 1.05rem;
-}
-
-.hero-nav a {
-  color: #f5f3ec;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6);
   text-decoration: none;
-  margin-right: 1.6rem;
-  padding-bottom: 3px;
-  border-bottom: 1px solid transparent;
+  color: #f5f3ec;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.hero-nav a:hover { border-bottom-color: #cbb98a; }
+.hero-cards a:hover {
+  background: rgba(10, 9, 7, 0.65);
+  border-color: #cbb98a;
+  transform: translateY(-2px);
+}
+
+.hero-cards .card-title {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.hero-cards .card-hint {
+  display: block;
+  font-size: 0.78rem;
+  color: #d6d1c2;
+}
+
+.image-credit {
+  position: absolute;
+  z-index: 2;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: #f0ede2;
+  background: rgba(10, 9, 7, 0.5);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+
+.hero .image-credit { bottom: 0.6rem; right: 0.8rem; }
 
 /* Section page header (for inner pages, no big hero) */
 .page-header {
   position: relative;
   overflow: hidden;
-  padding: 8rem 1.5rem 3rem;
-  border-bottom: 1px solid var(--rule);
-  margin-bottom: 2rem;
+  padding: 8rem 1.5rem 2.2rem;
   text-align: center;
+}
+
+.page-header .image-credit { bottom: 0.5rem; right: 0.7rem; }
+
+.page-subtitle {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem 0;
+  text-align: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .page-header::before,
@@ -214,17 +267,8 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 600;
   font-size: 2.6rem;
-  margin: 0 0 0.4rem;
-  text-shadow: 0 0 14px var(--parchment), 0 0 4px var(--parchment);
-}
-
-.page-header .subtitle {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-style: italic;
-  text-shadow: 0 0 12px var(--parchment), 0 0 4px var(--parchment);
-  color: var(--muted);
-  font-size: 1.2rem;
   margin: 0;
+  text-shadow: 0 0 14px var(--parchment), 0 0 4px var(--parchment);
 }
 
 /* Content */
@@ -288,42 +332,6 @@ a:hover { color: #55401f; }
 
 .full-list {
   font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.card-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.card-links a {
-  display: block;
-  padding: 1.4rem 1.2rem;
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  text-decoration: none;
-  color: var(--ink);
-  text-align: center;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.card-links a:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-}
-
-.card-links .card-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.card-links .card-hint {
-  font-size: 0.85rem;
   color: var(--muted);
 }
 
