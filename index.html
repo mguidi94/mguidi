@@ -8,12 +8,35 @@
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
+<nav class="topnav" id="topnav">
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#talks">Talks &amp; Roles</a>
+  <a href="#mentoring">Mentoring</a>
+  <a href="#cv">CV</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
     <h1>Massimo Guidi</h1>
     <p class="tagline">Extracting non-Gaussian information from the large-scale structure of the Universe through higher-order clustering statistics.</p>
     <p class="affiliation">Postdoctoral Researcher, Department of Physics and Astronomy, University of Bologna</p>
-    <nav>
+    <div class="icon-links">
+      <a href="mailto:massimo.guidi@unibo.it" aria-label="Email" title="Email">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20v16H2V4zm2 2v.5l8 5.5 8-5.5V6H4zm16 3.2-7.4 5.1a1 1 0 0 1-1.2 0L4 9.2V18h16V9.2z"/></svg>
+      </a>
+      <a href="https://orcid.org/0000-0001-9408-1101" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.6 6.9a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM8.5 10.9v7.1H6.7v-7.1h1.8zm2.2 0h3.4c3.2 0 4.6 2.3 4.6 3.6 0 2-1.6 3.5-4.6 3.5h-3.4v-7.1zm1.8 1.6v3.9h1.5c2 0 2.9-1 2.9-2s-.8-1.9-2.9-1.9h-1.5z"/></svg>
+      </a>
+      <a href="https://ui.adsabs.harvard.edu/" target="_blank" rel="noopener" aria-label="ADS" title="NASA ADS">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2zm0 2.2 7.5 3.8L12 11.8 4.5 8 12 4.2zM4 9.6l7 3.5v7.1l-7-3.5V9.6zm9 10.6v-7.1l7-3.5v7.1l-7 3.5z"/></svg>
+      </a>
+      <a href="https://github.com/mguidi94" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.2-3.37-1.2-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+      </a>
+    </div>
+    <nav class="hero-nav">
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#talks">Talks &amp; Roles</a>
@@ -26,7 +49,7 @@
 
 <main>
 
-  <section id="research">
+  <section id="research" class="reveal">
     <h2>Research</h2>
     <p>
       My work develops and applies joint analyses of the two- and three-point correlation functions
@@ -42,26 +65,26 @@
     </p>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="reveal">
     <h2>Publications</h2>
 
     <h3>Lead author</h3>
-    <ul class="pub-list">
-      <li>
-        <strong>Guidi, M.</strong>, Moresco, M., Veropalumbo, A., Cavazzini, L., Farina, A., Labate, A.
+    <div class="pub-list">
+      <div class="pub-card">
+        <p><strong>Guidi, M.</strong>, Moresco, M., Veropalumbo, A., Cavazzini, L., Farina, A., Labate, A.
         (2026), <em>First full-shape joint analysis of the two- and three-point correlation functions
-        on real data: ΛCDM cosmological constraints from BOSS DR12</em>,
-        <a href="https://arxiv.org/abs/2606.26237" target="_blank" rel="noopener">arXiv:2606.26237</a>
-        <span class="status">(under review)</span>
-      </li>
-      <li>
-        <strong>Guidi, M.</strong> et al. (2023), <em>A new model for three-point statistics to probe
-        Galaxy Clustering in the nonlinear regime</em>, JCAP
-      </li>
-    </ul>
+        on real data: ΛCDM cosmological constraints from BOSS DR12</em></p>
+        <p><a href="https://arxiv.org/abs/2606.26237" target="_blank" rel="noopener">arXiv:2606.26237</a>
+        <span class="status">under review</span></p>
+      </div>
+      <div class="pub-card">
+        <p><strong>Guidi, M.</strong> et al. (2023), <em>A new model for three-point statistics to probe
+        Galaxy Clustering in the nonlinear regime</em>, JCAP</p>
+      </div>
+    </div>
 
     <h3>Selected co-authored work</h3>
-    <ul class="pub-list">
+    <ul class="pub-list-plain">
       <li>Euclid Collaboration, Guidi, M., et al. (2025), <em>Euclid preparation. Full-shape modelling
         of 2-point and 3-point correlation functions in real space</em>, A&amp;A (accepted)</li>
       <li>Labate, A., Guidi, M., Moresco, M., Veropalumbo, A. (2025), <em>The imprints of massive
@@ -77,7 +100,7 @@
     </p>
   </section>
 
-  <section id="talks">
+  <section id="talks" class="reveal">
     <h2>Talks &amp; Roles</h2>
 
     <h3>Selected recent talks</h3>
@@ -99,7 +122,7 @@
     </ul>
   </section>
 
-  <section id="mentoring">
+  <section id="mentoring" class="reveal">
     <h2>Mentoring</h2>
     <ul>
       <li>Andrea Labate — PhD co-supervision, University of Bologna (ongoing since 2025)</li>
@@ -111,12 +134,12 @@
     </ul>
   </section>
 
-  <section id="cv">
+  <section id="cv" class="reveal">
     <h2>CV</h2>
     <p><a href="cv.pdf">Download full CV (PDF)</a></p>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="reveal">
     <h2>Contact</h2>
     <p>massimo.guidi [at] unibo.it</p>
   </section>
@@ -127,5 +150,8 @@
   <p>Massimo Guidi</p>
 </footer>
 
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</a>
+
+<script src="script.js"></script>
 </body>
 </html>
