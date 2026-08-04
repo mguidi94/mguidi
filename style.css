@@ -1,20 +1,10 @@
 :root {
   --text: #1d1d1d;
   --muted: #5a5a5a;
-  --bg: #ffffff;
-  --accent: #7a2e2e;
-  --rule: #dddddd;
-  --max-width: 720px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #e6e6e6;
-    --muted: #a3a3a3;
-    --bg: #141414;
-    --accent: #d99a9a;
-    --rule: #333333;
-  }
+  --bg: #fbfaf7;
+  --accent: #3f3a8a;
+  --rule: #e2e0da;
+  --max-width: 760px;
 }
 
 * { box-sizing: border-box; }
@@ -24,51 +14,88 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-header, main, footer {
+main, footer, .header-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem 1.25rem;
+  padding: 0 1.25rem;
 }
 
+main { padding-top: 2rem; padding-bottom: 2rem; }
+footer { padding-top: 1rem; padding-bottom: 2rem; }
+
+/* Header: deep-space gradient with a CSS-only starfield, no image assets */
 header {
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--rule);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a0e27 0%, #1a1f52 55%, #2c2a6b 100%);
+  color: #f2f1fb;
+  padding: 3rem 0 2.5rem;
 }
 
-h1 {
-  font-size: 1.75rem;
-  margin: 0 0 0.5rem;
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.85;
+  background-image:
+    radial-gradient(1.6px 1.6px at 8% 22%,  #ffffff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 18% 68%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.8px 1.8px at 27% 12%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 36% 80%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 45% 35%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 54% 58%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.8px 1.8px at 63% 20%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 72% 75%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.6px 1.6px at 81% 40%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 90% 62%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 95% 15%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 12% 90%, #ffffff 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 60% 90%, #ffffff 50%, transparent 51%);
+  pointer-events: none;
 }
 
-.tagline {
-  font-size: 1.05rem;
-  color: var(--muted);
+.header-inner {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+header .tagline {
+  font-size: 1.08rem;
+  color: #d6d4f2;
   margin: 0 0 0.4rem;
+  max-width: 44em;
 }
 
-.affiliation {
+header .affiliation {
   font-size: 0.95rem;
-  color: var(--muted);
-  margin: 0 0 1rem;
+  color: #a9a6d6;
+  margin: 0 0 1.5rem;
 }
 
 nav {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 nav a {
-  color: var(--text);
+  color: #e8e7fa;
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: 1.25rem;
+  padding-bottom: 2px;
   border-bottom: 1px solid transparent;
 }
 
 nav a:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: #9b97e6;
 }
 
 section {
@@ -76,20 +103,19 @@ section {
   border-bottom: 1px solid var(--rule);
 }
 
-section:last-child {
-  border-bottom: none;
-}
+section:last-child { border-bottom: none; }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   margin: 0 0 0.75rem;
+  color: #232052;
 }
 
 h3 {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--muted);
   margin: 1.25rem 0 0.5rem;
 }
@@ -100,6 +126,7 @@ ul { margin: 0 0 0.9rem; padding-left: 1.2rem; }
 li { margin-bottom: 0.5rem; }
 
 a { color: var(--accent); }
+a:hover { color: #241f66; }
 
 .status {
   font-family: Helvetica, Arial, sans-serif;
@@ -116,5 +143,4 @@ footer {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.85rem;
   color: var(--muted);
-  padding-top: 1rem;
 }
