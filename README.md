@@ -5,15 +5,23 @@ Sito personale statico (HTML/CSS puro) per Massimo Guidi. Nessuna build necessar
 ## Anteprima locale
 Aprire `index.html` direttamente nel browser.
 
-## Deploy (fase privata: online ma protetto da login)
-1. `git init`, commit, push su un repo **privato** GitHub (es. `gh repo create guidi-site --private --source=. --push`)
-2. Su [Cloudflare Pages](https://pages.cloudflare.com/): "Create a project" → "Connect to Git" → seleziona il repo GitHub → build command vuoto, output directory `/` (root)
-3. Dopo il primo deploy, andare su **Cloudflare Zero Trust → Access → Applications** → "Add an application" → tipo "Self-hosted" → dominio: quello assegnato da Pages (`*.pages.dev`) → policy: "Allow" solo per le email autorizzate (es. la propria + eventuali revisori)
-4. Il sito è ora raggiungibile online ma richiede login via codice OTP inviato all'email autorizzata
+## Stato attuale
+- Repo GitHub privato: `github.com/mguidi94/guidi-site`
+- Deploy live via Cloudflare Pages/Workers: `https://guidi-site.massimo-guidi6.workers.dev`
+- Nessuna protezione Access attiva: il sito è raggiungibile da chiunque abbia il link (non indicizzato, non elencato pubblicamente). Scelta esplicita dell'utente per semplicità durante la fase di correzioni.
 
-## Lancio pubblico
-Rimuovere/disabilitare la Access Application creata al punto 3 (Cloudflare Zero Trust → Access → Applications → elimina policy). Nessun altro cambiamento necessario: stesso URL, stesso deploy.
+## Aggiornare il sito
+Modificare i file locali in questa cartella, poi:
+```
+git add -A
+git commit -m "messaggio"
+git push
+```
+Cloudflare rifà il deploy automaticamente ad ogni push (di solito entro 1-2 minuti).
 
-## Contenuti da verificare prima del lancio
-- Indirizzo email in `index.html` (sezione Contact) è un placeholder plausibile (`massimo.guidi@unibo.it`) — non confermato nei file sorgente, va verificato/corretto da Guidi
+## Attivare login (opzionale, se in futuro serve restringere l'accesso)
+Cloudflare dashboard → **Zero Trust → Access → Applications → Add an application** → tipo "Self-hosted" → dominio: `guidi-site.massimo-guidi6.workers.dev` → policy "Allow" con le email autorizzate. Per rimuoverla di nuovo: elimina la Access Application, nessun altro cambiamento.
+
+## Contenuti verificati
+- Indirizzo email in `index.html` (sezione Contact): confermato corretto da Guidi
 - Link ORCID e arXiv verificati contro `own-bib.bib`
