@@ -176,11 +176,11 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   background-position: center 30%;
   background-size: cover;
   filter: grayscale(1) contrast(1.05);
-  opacity: 0.65;
+  opacity: 0.95;
 }
 
 .page-header::after {
-  background: rgba(247,244,236,0.5);
+  background: rgba(247,244,236,0.15);
 }
 
 .page-header > * { position: relative; z-index: 1; }
@@ -197,11 +197,13 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   font-weight: 600;
   font-size: 2.6rem;
   margin: 0 0 0.4rem;
+  text-shadow: 0 0 14px var(--parchment), 0 0 4px var(--parchment);
 }
 
 .page-header .subtitle {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
+  text-shadow: 0 0 12px var(--parchment), 0 0 4px var(--parchment);
   color: var(--muted);
   font-size: 1.2rem;
   margin: 0;
