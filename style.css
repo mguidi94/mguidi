@@ -149,11 +149,40 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 
 /* Section page header (for inner pages, no big hero) */
 .page-header {
-  padding: 7rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 1.5rem 3rem;
   border-bottom: 1px solid var(--rule);
   margin-bottom: 2rem;
   text-align: center;
 }
+
+.page-header::before,
+.page-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.page-header::before {
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1) contrast(1.05);
+  opacity: 0.22;
+}
+
+.page-header::after {
+  background: linear-gradient(180deg, var(--parchment) 0%, rgba(247,244,236,0.75) 45%, var(--parchment) 100%);
+}
+
+.page-header > * { position: relative; z-index: 1; }
+
+.page-header.research::before      { background-image: url('assets/astronomer.jpg'); }
+.page-header.publications::before  { background-image: url('assets/geographer.jpg'); }
+.page-header.talks::before         { background-image: url('assets/galileo-telescope.jpg'); }
+.page-header.mentoring::before     { background-image: url('assets/cellarius-cosmos.jpg'); }
+.page-header.cv::before            { background-image: url('assets/cv-instrument.jpg'); }
+.page-header.contact::before       { background-image: url('assets/contact-starchart.jpg'); }
 
 .page-header h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
