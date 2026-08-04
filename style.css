@@ -60,26 +60,34 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 /* Hero: Flammarion engraving, desaturated, vignette for legibility */
 .hero {
   position: relative;
-  overflow: hidden;
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
   color: #f5f3ec;
-  background: #0c0a08 url('assets/flammarion.jpg') center 30%/cover no-repeat;
+  background: #0c0a08;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(1) contrast(1.05);
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(10,9,7,0.55) 0%, rgba(10,9,7,0.72) 60%, rgba(10,9,7,0.88) 100%);
-  filter: grayscale(1) contrast(1.05);
+  top: 0; left: 0; right: 0;
+  height: 65%;
+  background: linear-gradient(180deg, rgba(10,9,7,0.82) 0%, rgba(10,9,7,0.5) 60%, rgba(10,9,7,0) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-inner {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+  padding-top: 3rem;
   animation: fade-up 1s ease both;
 }
 
@@ -165,14 +173,14 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 }
 
 .page-header::before {
-  background-position: center;
+  background-position: center 30%;
   background-size: cover;
   filter: grayscale(1) contrast(1.05);
-  opacity: 0.22;
+  opacity: 0.65;
 }
 
 .page-header::after {
-  background: linear-gradient(180deg, var(--parchment) 0%, rgba(247,244,236,0.75) 45%, var(--parchment) 100%);
+  background: rgba(247,244,236,0.5);
 }
 
 .page-header > * { position: relative; z-index: 1; }
