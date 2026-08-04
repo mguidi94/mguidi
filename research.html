@@ -26,64 +26,55 @@
 
 <main>
   <section class="reveal visible">
-    <h3>Open questions</h3>
     <p>
-      Cosmology's standard model explains a remarkable range of observations, yet its main
-      ingredients — dark matter and dark energy — remain unidentified, and the growth rate of
-      cosmic structure offers one of the sharpest tests of whether General Relativity holds on
-      the largest scales. Answering these questions requires precise, unbiased measurements of
-      how matter is distributed across the Universe.
+      The ΛCDM model accounts for a remarkable range of cosmological observations, yet the
+      physical nature of its two dominant components — dark matter and dark energy — remains
+      unknown, and the rate at which cosmic structure grows offers one of the most direct tests
+      of General Relativity on the largest observable scales. Progress on these questions rests
+      on our ability to measure, with ever greater precision, how matter is distributed
+      throughout the Universe. Spectroscopic galaxy surveys — from BOSS to the ongoing DESI and
+      the incoming Euclid mission — have mapped the three-dimensional positions of millions of
+      galaxies, turning the large-scale structure of the cosmic web into one of the sharpest
+      probes available of both the initial conditions of the Universe and their subsequent
+      gravitational evolution.
     </p>
-
-    <h3>Large-scale structure as a probe</h3>
     <p>
-      Galaxy redshift surveys — Euclid, DESI, and their predecessors such as BOSS — map the
-      three-dimensional distribution of galaxies across billions of light-years. This
-      large-scale structure, the cosmic web of filaments, nodes, and voids, encodes the
-      initial conditions of the Universe and their subsequent gravitational evolution, making
-      it one of the richest probes available for the questions above.
+      Two-point statistics — the correlation function in configuration space, or the power
+      spectrum in Fourier space — fully describe a Gaussian random field, and much of the last
+      two decades of galaxy clustering has been built on them: baryon acoustic oscillations as
+      a standard ruler, redshift-space distortions as a probe of the growth rate. But the
+      observed galaxy field is not Gaussian. Nonlinear gravitational evolution, the nonlinear
+      and non-local relation between galaxies and the underlying matter field, redshift-space
+      distortions, and possibly primordial physics from inflation all transfer cosmological
+      information from the two-point function to higher order — chiefly to the three-point
+      correlation function (3PCF) in configuration space and its Fourier-space counterpart, the
+      bispectrum. Exploiting them jointly with the 2PCF has repeatedly been shown to break
+      parameter degeneracies and tighten cosmological constraints beyond what two-point
+      statistics alone can deliver.
     </p>
-    <figure class="fig">
-      <img src="assets/fig-cosmic-web.png" alt="Schematic Voronoi tessellation illustrating the cosmic web of nodes, filaments and voids">
-      <figcaption>A simplified geometric analogue of the cosmic web: nodes and filaments emerging from an underlying point distribution.</figcaption>
-    </figure>
-
-    <h3>Beyond linear theory</h3>
     <p>
-      On large scales and at early times, structure grows linearly and its statistics stay
-      close to Gaussian — fully captured by the two-point correlation function (2PCF), or
-      equivalently the power spectrum. But most of the cosmological information accessible to
-      current and future surveys sits at smaller, mildly nonlinear scales, where gravitational
-      collapse generates non-Gaussianity. There, the 2PCF alone leaves information on the
-      table.
+      Most full-shape analyses of three-point statistics to date have worked in Fourier space,
+      where efficient estimators and mature perturbation-theory frameworks — from standard and
+      Lagrangian perturbation theory to the effective field theory of large-scale structure —
+      are already well established. Configuration space offers a complementary advantage: its
+      estimators handle the complex geometry of a spectroscopic survey directly, without the
+      need to convolve theoretical predictions with a survey window function. What has long
+      held the 3PCF back is computational cost — direct triplet counting scales as the cube of
+      the number of galaxies — together with the limited availability of accurate, efficient
+      models suitable for a genuine full-shape likelihood analysis.
     </p>
-
-    <h3>3PCF versus the bispectrum</h3>
     <p>
-      The three-point correlation function (3PCF) is the next term in the same hierarchy, and
-      its Fourier-space counterpart is the bispectrum. The two carry, in principle, the same
-      information — but working in configuration space has practical advantages I have relied
-      on throughout my research: geometric intuition for what a given signal means physically,
-      and more direct control over how survey masks and complex geometries enter the analysis.
-    </p>
-    <figure class="fig">
-      <img src="assets/fig-hierarchy.png" alt="Schematic comparing pair and triplet configurations in configuration space with the power spectrum and bispectrum in Fourier space">
-      <figcaption>The statistical hierarchy: pairs and triplets in configuration space correspond to the power spectrum and bispectrum in Fourier space.</figcaption>
-    </figure>
-    <figure class="fig fig-narrow">
-      <img src="assets/fig-triangle.png" alt="Triangle configuration of the three-point correlation function, parametrised by two side lengths and the angle between them">
-      <figcaption>A 3PCF measurement is a function of a triangle shape (r₁, r₂, θ) — information a two-point statistic cannot see.</figcaption>
-    </figure>
-
-    <h3>My contribution</h3>
-    <p>
-      My research has developed the analytic modelling of the 3PCF into the mildly nonlinear
-      regime and turned it into a tool that can actually be applied to data. This includes an
-      analytic next-to-leading-order model for the matter 3PCF, the first joint full-shape
-      analysis combining the 2PCF and 3PCF on real spectroscopic data (BOSS DR12), the
-      full-shape real-space modelling adopted in the Euclid preparation papers, and ML
-      emulators that make joint 2PCF+3PCF likelihood exploration computationally feasible. See
-      <a href="publications.html">Publications</a> for the full list.
+      My research has been built around closing that gap. I developed an analytic
+      next-to-leading-order model for the real-space matter 3PCF, validated it against N-body
+      simulations, and used it for the first full-shape joint analysis of the 2PCF and 3PCF on
+      synthetic catalogues built to match the Euclid spectroscopic sample. More recently, I led
+      the first joint full-shape analysis of the 2PCF and 3PCF multipoles in redshift space on
+      real data, using BOSS DR12, building on a non-perturbative treatment of line-of-sight
+      velocity statistics combined with a one-loop description of the density field — a step
+      that had remained missing from configuration-space clustering analyses until now. To make
+      this kind of joint analysis computationally tractable, I also built machine-learning
+      emulators for fast 2PCF+3PCF likelihood exploration. Details and the full list of
+      publications are on the <a href="publications.html">Publications</a> page.
     </p>
   </section>
 </main>
