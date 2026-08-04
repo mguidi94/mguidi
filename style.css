@@ -109,41 +109,69 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 .hero h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 600;
-  font-size: clamp(2.4rem, 6vw, 3.4rem);
-  margin: 0 0 0.5rem;
+  font-size: clamp(3rem, 7.5vw, 4.6rem);
+  margin: 0 0 0.6rem;
   letter-spacing: 0.02em;
 }
 
 .hero .tagline {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  font-size: 1.35rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
   color: #e8e4d8;
-  margin: 0 auto 0.5rem;
-  max-width: 32em;
+  margin: 0 auto 0.7rem;
+  max-width: 34em;
 }
 
 .hero .affiliation {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #c9c3b3;
-  margin: 0 0 2rem;
+  margin: 0 0 0.35rem;
   letter-spacing: 0.02em;
+}
+
+.hero .phd-line {
+  font-size: 1rem;
+  color: #a9a6d6;
+  margin: 0 0 1.4rem;
+  letter-spacing: 0.02em;
+  font-variant: small-caps;
+}
+
+.hero-divider {
+  width: 90px;
+  height: 1px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(90deg, transparent, #cbb98a, transparent);
+  position: relative;
+}
+
+.hero-divider::after {
+  content: "✦";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #cbb98a;
+  font-size: 0.85rem;
+  background: transparent;
 }
 
 .icon-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.1rem;
+  margin-bottom: 0;
 }
 
 .icon-links a {
   color: #e8e4d8;
   display: inline-flex;
-  padding: 0.4rem;
+  padding: 0.45rem;
   border-radius: 50%;
   transition: color 0.2s ease, background 0.2s ease;
 }
+
+.icon-links a svg { width: 22px; height: 22px; }
 
 .icon-links a:hover {
   color: #ffffff;
@@ -152,20 +180,20 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 
 .hero-cards {
   position: absolute;
-  bottom: 0; left: 50%;
+  bottom: 12%; left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 780px;
+  max-width: 840px;
   z-index: 2;
-  padding: 1.5rem 1.5rem 2.4rem;
+  padding: 0 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.1rem;
 }
 
 .hero-cards a {
   display: block;
-  padding: 0.9rem 1rem;
+  padding: 1.15rem 1.1rem;
   background: rgba(10, 9, 7, 0.45);
   backdrop-filter: blur(3px);
   border: 1px solid rgba(245, 243, 236, 0.25);
@@ -187,13 +215,13 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-variant: small-caps;
   letter-spacing: 0.06em;
-  font-size: 1.15rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
 }
 
 .hero-cards .card-hint {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: #d6d1c2;
 }
 
@@ -220,7 +248,16 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   text-align: center;
 }
 
-.page-header .image-credit { bottom: 0.5rem; right: 0.7rem; }
+.page-credit {
+  max-width: var(--max-width);
+  margin: 0.7rem auto 0;
+  padding: 0 1.5rem;
+  text-align: right;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
 
 .page-subtitle {
   max-width: var(--max-width);
@@ -307,6 +344,11 @@ li { margin-bottom: 0.55rem; }
 
 a { color: var(--accent); }
 a:hover { color: #55401f; }
+
+.links {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
 
 /* Ornamental divider between entries */
 .entry {
