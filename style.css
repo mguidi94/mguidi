@@ -57,26 +57,39 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 .topnav a { color: var(--ink); text-decoration: none; }
 .topnav a:hover, .topnav a.current { color: var(--accent); border-bottom: 1px solid var(--accent); }
 
-/* Hero: Flammarion engraving, desaturated, vignette for legibility */
+/* Hero: Flammarion engraving, fills exactly one screen, no scroll */
 .hero {
   position: relative;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   color: #f5f3ec;
   background: #0c0a08;
 }
 
 .hero-img {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  /* biased toward the bottom so the engraving's ornamental frame stays in view
+     instead of being cropped off the top of a short/wide viewport */
+  object-position: center 82%;
   filter: grayscale(1) contrast(1.05);
+  z-index: 0;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 50%;
-  background: linear-gradient(180deg, rgba(10,9,7,0.82) 0%, rgba(10,9,7,0.45) 65%, rgba(10,9,7,0) 100%);
+  height: 45%;
+  background: linear-gradient(180deg, rgba(10,9,7,0.82) 0%, rgba(10,9,7,0.4) 65%, rgba(10,9,7,0) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -85,63 +98,63 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   content: "";
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 22%;
-  background: linear-gradient(0deg, rgba(10,9,7,0.88) 0%, rgba(10,9,7,0.55) 70%, rgba(10,9,7,0) 100%);
+  height: 30%;
+  background: linear-gradient(0deg, rgba(10,9,7,0.9) 0%, rgba(10,9,7,0.55) 65%, rgba(10,9,7,0) 100%);
   pointer-events: none;
   z-index: 1;
 }
 
 .hero-inner {
-  position: absolute;
-  top: 0; left: 50%;
-  width: 100%;
+  position: relative;
   z-index: 2;
-  padding-top: 3rem;
+  width: 100%;
+  padding-top: 3vh;
   text-align: center;
   animation: hero-fade-up 1s ease both;
 }
 
 @keyframes hero-fade-up {
-  from { opacity: 0; transform: translate(-50%, 14px); }
-  to   { opacity: 1; transform: translate(-50%, 0); }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 600;
-  font-size: clamp(3rem, 7.5vw, 4.6rem);
-  margin: 0 0 0.6rem;
+  font-size: clamp(1.9rem, 6vh, 3.6rem);
+  margin: 0 0 0.5vh;
   letter-spacing: 0.02em;
 }
 
 .hero .tagline {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-size: clamp(0.95rem, 2.4vh, 1.5rem);
   color: #e8e4d8;
-  margin: 0 auto 0.7rem;
+  margin: 0 auto 0.6vh;
   max-width: 34em;
+  padding: 0 1.5rem;
 }
 
 .hero .affiliation {
-  font-size: 1.15rem;
+  font-size: clamp(0.75rem, 1.7vh, 1.05rem);
   color: #c9c3b3;
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.3vh;
   letter-spacing: 0.02em;
 }
 
 .hero .phd-line {
-  font-size: 1rem;
+  font-size: clamp(0.68rem, 1.4vh, 0.95rem);
   color: #a9a6d6;
-  margin: 0 0 1.4rem;
+  margin: 0 0 1.2vh;
   letter-spacing: 0.02em;
   font-variant: small-caps;
 }
 
 .hero-divider {
-  width: 90px;
+  width: 70px;
   height: 1px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.2vh;
   background: linear-gradient(90deg, transparent, #cbb98a, transparent);
   position: relative;
 }
@@ -152,14 +165,14 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   color: #cbb98a;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   background: transparent;
 }
 
 .icon-links {
   display: flex;
   justify-content: center;
-  gap: 1.1rem;
+  gap: 1rem;
   margin-bottom: 0;
 }
 
@@ -171,7 +184,7 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   transition: color 0.2s ease, background 0.2s ease;
 }
 
-.icon-links a svg { width: 22px; height: 22px; }
+.icon-links a svg { width: 18px; height: 18px; }
 
 .icon-links a:hover {
   color: #ffffff;
@@ -179,21 +192,19 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
 }
 
 .hero-cards {
-  position: absolute;
-  bottom: 12%; left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 840px;
-  z-index: 2;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 3vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1vh 1rem;
 }
 
 .hero-cards a {
   display: block;
-  padding: 1.15rem 1.1rem;
+  padding: 1.4vh 0.9rem;
   background: rgba(10, 9, 7, 0.45);
   backdrop-filter: blur(3px);
   border: 1px solid rgba(245, 243, 236, 0.25);
@@ -215,13 +226,13 @@ footer { padding-top: 1.5rem; padding-bottom: 3rem; }
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-variant: small-caps;
   letter-spacing: 0.06em;
-  font-size: 1.35rem;
-  margin-bottom: 0.25rem;
+  font-size: clamp(0.85rem, 2vh, 1.25rem);
+  margin-bottom: 0.15rem;
 }
 
 .hero-cards .card-hint {
   display: block;
-  font-size: 0.85rem;
+  font-size: clamp(0.62rem, 1.3vh, 0.8rem);
   color: #d6d1c2;
 }
 
