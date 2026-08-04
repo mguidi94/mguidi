@@ -26,17 +26,64 @@
 
 <main>
   <section class="reveal visible">
+    <h3>Open questions</h3>
     <p>
-      My work develops and applies joint analyses of the two- and three-point correlation functions
-      (2PCF + 3PCF) of galaxy clustering, aiming to extract cosmological information beyond what
-      standard two-point statistics can capture. This includes analytical modelling of the
-      three-point correlation function in the mildly nonlinear regime, and its first joint
-      application together with the 2PCF to real survey data.
+      Cosmology's standard model explains a remarkable range of observations, yet its main
+      ingredients — dark matter and dark energy — remain unidentified, and the growth rate of
+      cosmic structure offers one of the sharpest tests of whether General Relativity holds on
+      the largest scales. Answering these questions requires precise, unbiased measurements of
+      how matter is distributed across the Universe.
     </p>
+
+    <h3>Large-scale structure as a probe</h3>
     <p>
-      Within the Euclid Consortium, I contributed the full-shape real-space modelling of the 2PCF
-      and 3PCF used in the Euclid preparation papers, and led the first joint 2PCF+3PCF full-shape
-      analysis of real spectroscopic data (BOSS DR12), currently under peer review.
+      Galaxy redshift surveys — Euclid, DESI, and their predecessors such as BOSS — map the
+      three-dimensional distribution of galaxies across billions of light-years. This
+      large-scale structure, the cosmic web of filaments, nodes, and voids, encodes the
+      initial conditions of the Universe and their subsequent gravitational evolution, making
+      it one of the richest probes available for the questions above.
+    </p>
+    <figure class="fig">
+      <img src="assets/fig-cosmic-web.png" alt="Schematic Voronoi tessellation illustrating the cosmic web of nodes, filaments and voids">
+      <figcaption>A simplified geometric analogue of the cosmic web: nodes and filaments emerging from an underlying point distribution.</figcaption>
+    </figure>
+
+    <h3>Beyond linear theory</h3>
+    <p>
+      On large scales and at early times, structure grows linearly and its statistics stay
+      close to Gaussian — fully captured by the two-point correlation function (2PCF), or
+      equivalently the power spectrum. But most of the cosmological information accessible to
+      current and future surveys sits at smaller, mildly nonlinear scales, where gravitational
+      collapse generates non-Gaussianity. There, the 2PCF alone leaves information on the
+      table.
+    </p>
+
+    <h3>3PCF versus the bispectrum</h3>
+    <p>
+      The three-point correlation function (3PCF) is the next term in the same hierarchy, and
+      its Fourier-space counterpart is the bispectrum. The two carry, in principle, the same
+      information — but working in configuration space has practical advantages I have relied
+      on throughout my research: geometric intuition for what a given signal means physically,
+      and more direct control over how survey masks and complex geometries enter the analysis.
+    </p>
+    <figure class="fig">
+      <img src="assets/fig-hierarchy.png" alt="Schematic comparing pair and triplet configurations in configuration space with the power spectrum and bispectrum in Fourier space">
+      <figcaption>The statistical hierarchy: pairs and triplets in configuration space correspond to the power spectrum and bispectrum in Fourier space.</figcaption>
+    </figure>
+    <figure class="fig fig-narrow">
+      <img src="assets/fig-triangle.png" alt="Triangle configuration of the three-point correlation function, parametrised by two side lengths and the angle between them">
+      <figcaption>A 3PCF measurement is a function of a triangle shape (r₁, r₂, θ) — information a two-point statistic cannot see.</figcaption>
+    </figure>
+
+    <h3>My contribution</h3>
+    <p>
+      My research has developed the analytic modelling of the 3PCF into the mildly nonlinear
+      regime and turned it into a tool that can actually be applied to data. This includes an
+      analytic next-to-leading-order model for the matter 3PCF, the first joint full-shape
+      analysis combining the 2PCF and 3PCF on real spectroscopic data (BOSS DR12), the
+      full-shape real-space modelling adopted in the Euclid preparation papers, and ML
+      emulators that make joint 2PCF+3PCF likelihood exploration computationally feasible. See
+      <a href="publications.html">Publications</a> for the full list.
     </p>
   </section>
 </main>

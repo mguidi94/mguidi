@@ -346,6 +346,32 @@ h3 {
 
 p { margin: 0 0 0.9rem; }
 
+.fig {
+  margin: 1.6rem 0;
+}
+
+.fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+.fig.fig-narrow {
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fig figcaption {
+  margin-top: 0.5rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
 ul { margin: 0 0 0.9rem; padding-left: 1.2rem; }
 li { margin-bottom: 0.55rem; }
 
