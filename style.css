@@ -589,3 +589,17 @@ body { font-variant-numeric: lining-nums; }
 .page-credit.left { right: auto; left: var(--gutter); max-width: 38%; text-align: left; }
 @media (max-width: 760px) { .ph-mod, .ph-mod.dim { opacity: 0.32; }
 .page-credit.left { display: none; } }
+
+/* Phone layout: stats in one row, buttons side by side, room for the header credit */
+@media (max-width: 760px) {
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem 1rem; }
+  .stat b { font-size: 2rem; }
+  .stat small { display: block; font-size: 0.56rem; letter-spacing: 0.08em; line-height: 1.35; }
+  .stats-cap { font-size: 0.55rem; letter-spacing: 0.08em; line-height: 1.5; }
+  .actions .btn { flex: 1 1 0; text-align: center; padding-inline: 0.8rem; }
+  .actions .icon-links { flex-basis: 100%; }
+  .page-hero-inner { padding-bottom: 4.8rem; }
+  .page-credit { font-size: 0.55rem; bottom: 0.6rem; }
+  .statbar { gap: 0.35rem 1.1rem; }
+  .statbar .dot { display: none; }
+}
