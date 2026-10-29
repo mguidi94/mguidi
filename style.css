@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 /* ---------- Design tokens ---------- */
 :root {
@@ -13,10 +13,11 @@
   --hair: rgba(196, 161, 90, 0.28);
   --rule: #ddd5c4;
 
+  /* single typeface site-wide (Cormorant Garamond); the old ui/mono/read roles all point to it */
   --f-display: 'Cormorant Garamond', 'Cormorant', Garamond, 'Times New Roman', serif;
-  --f-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --f-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
-  --f-read: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --f-ui: 'Cormorant Garamond', 'Cormorant', Garamond, 'Times New Roman', serif;
+  --f-mono: 'Cormorant Garamond', 'Cormorant', Garamond, 'Times New Roman', serif;
+  --f-read: 'Cormorant Garamond', 'Cormorant', Garamond, 'Times New Roman', serif;
 
   --nav-h: 64px;
   --gutter: clamp(1rem, 4vw, 2.5rem);
@@ -559,3 +560,7 @@ html.js .reveal.visible { opacity: 1; transform: none; }
 /* mono tags: darker on paper, brass on dark */
 .mono-tag { color: var(--brass-deep); border-color: #cdbf9d; }
 .feature .mono-tag { color: var(--brass); border-color: var(--hair); }
+
+/* Cormorant runs small: scale the whole rem system up and use lining figures for dates and counts */
+html { font-size: 118%; }
+body { font-variant-numeric: lining-nums; }
