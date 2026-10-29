@@ -6,7 +6,7 @@ Sito personale statico (HTML/CSS puro) per Massimo Guidi. Nessuna build necessar
 Aprire `index.html` direttamente nel browser.
 
 ## Stato attuale
-- Repo GitHub privato: `github.com/mguidi94/guidi-site`
+- Repo GitHub privato: `github.com/mguidi94/mguidi`
 - Deploy live via Cloudflare Pages/Workers: `https://guidi-site.massimo-guidi6.workers.dev`
 - Nessuna protezione Access attiva: il sito è raggiungibile da chiunque abbia il link (non indicizzato, non elencato pubblicamente). Scelta esplicita dell'utente per semplicità durante la fase di correzioni.
 - Branch locale `redesign-2026` (non pushato): redesign "Harmonia Nova" (antico + moderno), pubblicazioni/talk/mentoring rigenerati dal CV; in attesa di approvazione prima del push.
