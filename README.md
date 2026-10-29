@@ -9,6 +9,7 @@ Aprire `index.html` direttamente nel browser.
 - Repo GitHub privato: `github.com/mguidi94/guidi-site`
 - Deploy live via Cloudflare Pages/Workers: `https://guidi-site.massimo-guidi6.workers.dev`
 - Nessuna protezione Access attiva: il sito è raggiungibile da chiunque abbia il link (non indicizzato, non elencato pubblicamente). Scelta esplicita dell'utente per semplicità durante la fase di correzioni.
+- Branch locale `redesign-2026` (non pushato): redesign "Harmonia Nova" (antico + moderno), pubblicazioni/talk/mentoring rigenerati dal CV; in attesa di approvazione prima del push.
 
 ## Aggiornare il sito
 Modificare i file locali in questa cartella, poi:

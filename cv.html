@@ -3,39 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CV — Massimo Guidi</title>
+<title>Curriculum Vitae · Massimo Guidi</title>
+<meta name="description" content="Appointments, education, grants and computing">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav class="topnav static" id="topnav">
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="talks.html">Talks &amp; Roles</a>
-  <a href="mentoring.html">Mentoring</a>
-  <a href="cv.html" class="current">CV</a>
-  <a href="contact.html">Contact</a>
+<nav class="topnav" id="topnav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="mono-mark" aria-hidden="true">MG</span><span>Massimo Guidi</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="talks.html">Talks &amp; Roles</a>
+    <a href="mentoring.html">Mentoring</a>
+    <a href="cv.html" class="current" aria-current="page">CV</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<header class="page-header cv">
-  <h1>Curriculum Vitae</h1>
+<header class="page-hero">
+  <img class="ph-img" src="assets/cv-instrument.jpg" alt="Engraving of an astronomical instrument">
+  <div class="page-hero-inner">
+    <p class="eyebrow">§ 05 · CV</p>
+    <h1>Curriculum Vitae</h1>
+    <p class="sub">Appointments, education, grants and computing</p>
+  </div>
+  <p class="page-credit">Andreas Cellarius, <em>Corporum Coelestium Magnitudines</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
 </header>
-<p class="page-credit">Andreas Cellarius, <em>Corporum Coelestium Magnitudines</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
-<p class="page-subtitle">Full academic record</p>
 
-<main>
-  <section class="reveal visible">
-    <p><a href="cv.pdf">Download full CV (PDF)</a></p>
-  </section>
+<main class="page">
+  <div class="wrap">
+    <p class="cv-cta"><a class="btn dark" href="cv.pdf">Download CV (PDF)</a></p>
+    <div class="grid-2">
+      <section class="infocard reveal">
+        <h3>Appointments</h3>
+        <ul>
+          <li><time>2024 – now</time><b>Postdoctoral researcher, University of Bologna.</b> Host: Prof. Michele Moresco. Funded by the Horizon Europe conceptual study of the Wide-field Spectroscopic Telescope (WST).</li>
+          <li><time>2023 – 2024</time><b>Postdoctoral researcher, Technion, Israel Institute of Technology, Haifa.</b> Host: Prof. Adi Nusser.</li>
+        </ul>
+      </section>
+      <section class="infocard reveal">
+        <h3>Education</h3>
+        <ul>
+          <li><time>Nov 2019 – Jun 2023</time><b>Ph.D. in Physics, Roma Tre University.</b> Supervisor: Prof. Enzo Branchini.</li>
+          <li><time>Jan 2017 – Jan 2019</time><b>M.Sc. in Physics, Sapienza University.</b> 110/110 cum laude. Supervisor: Prof. Alessandro Melchiorri.</li>
+          <li><time>Oct 2013 – Dec 2016</time><b>B.Sc. in Physics, Sapienza University.</b> 110/110 cum laude. Supervisor: Prof. Eugenio Del Re.</li>
+        </ul>
+      </section>
+      <section class="infocard reveal">
+        <h3>Grants &amp; computing</h3>
+        <ul>
+          <li><time>2026</time>Short Term Scientific Mission grant, CosmoVerse COST Action CA21136, hosted at ICCUB, Barcelona.</li>
+          <li><time>2026</time>PI of <em>FCCB23</em>, ISCRA Class-C project on CINECA Leonardo.</li>
+          <li><time>2025</time>PI of <em>Lik3BOSS</em> and <em>FS3PCF</em>, ISCRA Class-C projects on CINECA Leonardo.</li>
+          <li><time>2024</time>PI of <em>3mulate</em> (ISCRA Class-C) and <em>INA24C3B12</em> (INAF), on CINECA Leonardo.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
 </main>
 
-<footer>
-  <p>Massimo Guidi</p>
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <h4>Massimo Guidi</h4>
+      <p>Cosmologist, postdoctoral researcher at the University of Bologna.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks &amp; Roles</a>
+      <a href="mentoring.html">Mentoring</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="mono">Set in Cormorant Garamond, Inter &amp; IBM Plex Mono · Engravings: public domain</p>
+  </div>
+  <p class="foot-copy">© 2026 Massimo Guidi</p>
 </footer>
-
-<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</a>
-
 <script src="script.js"></script>
 </body>
 </html>

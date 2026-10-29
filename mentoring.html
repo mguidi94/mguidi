@@ -3,46 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mentoring — Massimo Guidi</title>
+<title>Mentoring · Massimo Guidi</title>
+<meta name="description" content="Co-supervision of PhD and Master theses at the University of Bologna">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav class="topnav static" id="topnav">
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="talks.html">Talks &amp; Roles</a>
-  <a href="mentoring.html" class="current">Mentoring</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html">Contact</a>
+<nav class="topnav" id="topnav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="mono-mark" aria-hidden="true">MG</span><span>Massimo Guidi</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="talks.html">Talks &amp; Roles</a>
+    <a href="mentoring.html" class="current" aria-current="page">Mentoring</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<header class="page-header mentoring">
-  <h1>Mentoring</h1>
+<header class="page-hero">
+  <img class="ph-img" src="assets/cellarius-cosmos.jpg" alt="Engraving of the cosmos after Cellarius">
+  <div class="page-hero-inner">
+    <p class="eyebrow">§ 04 · MENTORING</p>
+    <h1>Mentoring</h1>
+    <p class="sub">Co-supervision of PhD and Master theses at the University of Bologna</p>
+  </div>
+  <p class="page-credit">Andreas Cellarius, <em>Scenographia Systematis mundani Ptolemaici</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
 </header>
-<p class="page-credit">Andreas Cellarius, <em>Scenographia Systematis mundani Ptolemaici</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
-<p class="page-subtitle">PhD and MSc supervision</p>
 
-<main>
-  <section class="reveal visible">
-    <ul>
-      <li>Andrea Labate — PhD co-supervision, University of Bologna (ongoing since 2025)</li>
-      <li>Lorenzo Cavazzini — MSc co-supervision, University of Bologna (ongoing since 2025)</li>
-      <li>Andrea Labate — MSc co-supervision, University of Bologna (2025, full marks with honours;
-        now PhD student at University of Bologna)</li>
-      <li>Kristers Nagainis — MSc co-supervision, University of Bologna (2024, full marks with
-        honours; now PhD student at University of Leiden)</li>
-    </ul>
-  </section>
+<main class="page">
+  <div class="wrap">
+    <div class="grid-2">
+    <article class="mcard reveal">
+      <div class="pills"><span class="pill fill">PhD</span><span class="pill">ongoing</span></div>
+      <h3>Andrea Labate</h3>
+      <p class="where">Co-supervision of a PhD thesis, University of Bologna, ongoing since Nov 2025</p>
+      <p class="thesis">“Towards a comprehensive clustering analysis: maximizing the scientific return through the combination of lower-order and higher-order correlation functions in configuration and Fourier space”</p>
+      
+    </article>
+    <article class="mcard reveal">
+      <div class="pills"><span class="pill fill">MSc</span><span class="pill">completed</span></div>
+      <h3>Lorenzo Cavazzini</h3>
+      <p class="where">Co-supervision of a Master thesis, University of Bologna, March 2026</p>
+      <p class="thesis">“Constraining cosmology combining lower- and higher-order correlation functions from BOSS data”</p>
+      <p class="out">Evaluation: full marks with honours.</p>
+    </article>
+    <article class="mcard reveal">
+      <div class="pills"><span class="pill fill">MSc</span><span class="pill">completed</span></div>
+      <h3>Andrea Labate</h3>
+      <p class="where">Co-supervision of a Master thesis, University of Bologna, October 2025</p>
+      <p class="thesis">“Disentangling Massive Neutrino Cosmologies with Higher-Order Clustering Statistics”</p>
+      <p class="out">Evaluation: full marks with honours. Now PhD student at the University of Bologna.</p>
+    </article>
+    <article class="mcard reveal">
+      <div class="pills"><span class="pill fill">MSc</span><span class="pill">completed</span></div>
+      <h3>Kristers Nagainis</h3>
+      <p class="where">Co-supervision of a Master thesis, University of Bologna, October 2024</p>
+      <p class="thesis">“Enabling cosmological analysis at BAO scale with a new matter anisotropic three-point correlation function emulator”</p>
+      <p class="out">Evaluation: full marks with honours. Now PhD student at Leiden University.</p>
+    </article>
+    </div>
+  </div>
 </main>
 
-<footer>
-  <p>Massimo Guidi</p>
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <h4>Massimo Guidi</h4>
+      <p>Cosmologist, postdoctoral researcher at the University of Bologna.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks &amp; Roles</a>
+      <a href="mentoring.html">Mentoring</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="mono">Set in Cormorant Garamond, Inter &amp; IBM Plex Mono · Engravings: public domain</p>
+  </div>
+  <p class="foot-copy">© 2026 Massimo Guidi</p>
 </footer>
-
-<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</a>
-
 <script src="script.js"></script>
 </body>
 </html>

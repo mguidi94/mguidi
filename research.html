@@ -3,50 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research — Massimo Guidi</title>
+<title>Research · Massimo Guidi</title>
+<meta name="description" content="Higher-order clustering statistics of the large-scale structure">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav class="topnav static" id="topnav">
-  <a href="index.html">Home</a>
-  <a href="research.html" class="current">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="talks.html">Talks &amp; Roles</a>
-  <a href="mentoring.html">Mentoring</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html">Contact</a>
+<nav class="topnav" id="topnav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="mono-mark" aria-hidden="true">MG</span><span>Massimo Guidi</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="research.html" class="current" aria-current="page">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="talks.html">Talks &amp; Roles</a>
+    <a href="mentoring.html">Mentoring</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<header class="page-header research">
-  <h1>Research</h1>
+<header class="page-hero">
+  <img class="ph-img" src="assets/astronomer.jpg" alt="Engraving of an astronomer at work">
+  <div class="page-hero-inner">
+    <p class="eyebrow">§ 01 · RESEARCH</p>
+    <h1>Research</h1>
+    <p class="sub">Higher-order clustering statistics of the large-scale structure</p>
+  </div>
+  <p class="page-credit">Andreas Cellarius, <em>Scenographia Systematis Copernicani</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
 </header>
-<p class="page-credit">Andreas Cellarius, <em>Scenographia Systematis Copernicani</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
-<p class="page-subtitle">Higher-order clustering statistics of the large-scale structure</p>
 
-<main>
-  <section class="reveal visible">
+<main class="page">
+  <div class="wrap narrow prose">
     <p>
       The ΛCDM model accounts for a remarkable range of cosmological observations, yet the
-      physical nature of its two dominant components — dark matter and dark energy — remains
+      physical nature of its two dominant components (dark matter and dark energy) remains
       unknown, and the rate at which cosmic structure grows offers one of the most direct tests
       of General Relativity on the largest observable scales. Progress on these questions rests
       on our ability to measure, with ever greater precision, how matter is distributed
-      throughout the Universe. Spectroscopic galaxy surveys — from BOSS to the ongoing DESI and
-      the incoming Euclid mission — have mapped the three-dimensional positions of millions of
+      throughout the Universe. Spectroscopic galaxy surveys, from BOSS to the ongoing DESI and
+      the incoming Euclid mission, have mapped the three-dimensional positions of millions of
       galaxies, turning the large-scale structure of the cosmic web into one of the sharpest
       probes available of both the initial conditions of the Universe and their subsequent
       gravitational evolution.
     </p>
     <p>
-      Two-point statistics — the correlation function in configuration space, or the power
-      spectrum in Fourier space — fully describe a Gaussian random field, and much of the last
+      Two-point statistics (the correlation function in configuration space, or the power
+      spectrum in Fourier space) fully describe a Gaussian random field, and much of the last
       two decades of galaxy clustering has been built on them: baryon acoustic oscillations as
       a standard ruler, redshift-space distortions as a probe of the growth rate. But the
       observed galaxy field is not Gaussian. Nonlinear gravitational evolution, the nonlinear
       and non-local relation between galaxies and the underlying matter field, redshift-space
       distortions, and possibly primordial physics from inflation all transfer cosmological
-      information from the two-point function to higher order — chiefly to the three-point
+      information from the two-point function to higher order, chiefly to the three-point
       correlation function (3PCF) in configuration space and its Fourier-space counterpart, the
       bispectrum. Exploiting them jointly with the 2PCF has repeatedly been shown to break
       parameter degeneracies and tighten cosmological constraints beyond what two-point
@@ -54,13 +62,13 @@
     </p>
     <p>
       Most full-shape analyses of three-point statistics to date have worked in Fourier space,
-      where efficient estimators and mature perturbation-theory frameworks — from standard and
-      Lagrangian perturbation theory to the effective field theory of large-scale structure —
+      where efficient estimators and mature perturbation-theory frameworks (from standard and
+      Lagrangian perturbation theory to the effective field theory of large-scale structure)
       are already well established. Configuration space offers a complementary advantage: its
       estimators handle the complex geometry of a spectroscopic survey directly, without the
       need to convolve theoretical predictions with a survey window function. What has long
-      held the 3PCF back is computational cost — direct triplet counting scales as the cube of
-      the number of galaxies — together with the limited availability of accurate, efficient
+      held the 3PCF back is computational cost (direct triplet counting scales as the cube of
+      the number of galaxies) together with the limited availability of accurate, efficient
       models suitable for a genuine full-shape likelihood analysis.
     </p>
     <p>
@@ -70,21 +78,33 @@
       synthetic catalogues built to match the Euclid spectroscopic sample. More recently, I led
       the first joint full-shape analysis of the 2PCF and 3PCF multipoles in redshift space on
       real data, using BOSS DR12, building on a non-perturbative treatment of line-of-sight
-      velocity statistics combined with a one-loop description of the density field — a step
-      that had remained missing from configuration-space clustering analyses until now. To make
+      velocity statistics combined with a one-loop description of the density field. This step
+      had remained missing from configuration-space clustering analyses until now. To make
       this kind of joint analysis computationally tractable, I also built machine-learning
       emulators for fast 2PCF+3PCF likelihood exploration. Details and the full list of
       publications are on the <a href="publications.html">Publications</a> page.
     </p>
-  </section>
+  </div>
 </main>
 
-<footer>
-  <p>Massimo Guidi</p>
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <h4>Massimo Guidi</h4>
+      <p>Cosmologist, postdoctoral researcher at the University of Bologna.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks &amp; Roles</a>
+      <a href="mentoring.html">Mentoring</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="mono">Set in Cormorant Garamond, Inter &amp; IBM Plex Mono · Engravings: public domain</p>
+  </div>
+  <p class="foot-copy">© 2026 Massimo Guidi</p>
 </footer>
-
-<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</a>
-
 <script src="script.js"></script>
 </body>
 </html>

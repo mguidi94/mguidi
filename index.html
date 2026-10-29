@@ -3,57 +3,224 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Massimo Guidi — Cosmology</title>
+<title>Massimo Guidi · Cosmology</title>
+<meta name="description" content="Massimo Guidi, cosmologist at the University of Bologna: higher-order clustering statistics of the large-scale structure.">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav class="topnav" id="topnav">
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="talks.html">Talks &amp; Roles</a>
-  <a href="mentoring.html">Mentoring</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<header class="hero">
-  <img class="hero-img" src="assets/flammarion.jpg" alt="Flammarion engraving, L'Atmosphère: Météorologie Populaire, Paris 1888">
-  <div class="hero-inner">
-    <h1>Massimo Guidi</h1>
-    <p class="tagline">Extracting non-Gaussian information from the large-scale structure of the Universe through higher-order clustering statistics.</p>
-    <p class="affiliation">Postdoctoral Researcher, Department of Physics and Astronomy, University of Bologna</p>
-    <p class="phd-line">Ph.D. in Physics, Roma Tre University (2023)</p>
-    <div class="hero-divider"></div>
-    <div class="icon-links">
-      <a href="mailto:massimo.guidi@unibo.it" aria-label="Email" title="Email">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20v16H2V4zm2 2v.5l8 5.5 8-5.5V6H4zm16 3.2-7.4 5.1a1 1 0 0 1-1.2 0L4 9.2V18h16V9.2z"/></svg>
-      </a>
-      <a href="https://orcid.org/0000-0001-9408-1101" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.6 6.9a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM8.5 10.9v7.1H6.7v-7.1h1.8zm2.2 0h3.4c3.2 0 4.6 2.3 4.6 3.6 0 2-1.6 3.5-4.6 3.5h-3.4v-7.1zm1.8 1.6v3.9h1.5c2 0 2.9-1 2.9-2s-.8-1.9-2.9-1.9h-1.5z"/></svg>
-      </a>
-      <a href="https://ui.adsabs.harvard.edu/" target="_blank" rel="noopener" aria-label="ADS" title="NASA ADS">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2zm0 2.2 7.5 3.8L12 11.8 4.5 8 12 4.2zM4 9.6l7 3.5v7.1l-7-3.5V9.6zm9 10.6v-7.1l7-3.5v7.1l-7 3.5z"/></svg>
-      </a>
-      <a href="https://github.com/mguidi94" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.2-3.37-1.2-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-      </a>
-      <a href="https://gitlab.com/MGuidi" target="_blank" rel="noopener" aria-label="GitLab" title="GitLab">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></svg>
-      </a>
-    </div>
-  </div>
-  <nav class="hero-cards">
+<nav class="topnav home" id="topnav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="mono-mark" aria-hidden="true">MG</span><span>Massimo Guidi</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  <div class="nav-links" id="navLinks">
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
     <a href="talks.html">Talks &amp; Roles</a>
     <a href="mentoring.html">Mentoring</a>
     <a href="cv.html">CV</a>
     <a href="contact.html">Contact</a>
-  </nav>
-  <p class="image-credit">Anonymous engraving — Camille Flammarion, <em>L'Atmosphère: Météorologie Populaire</em> (Paris, 1888)</p>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Cosmologist · University of Bologna</p>
+      <h1><span>Massimo</span><span><em>Guidi</em></span></h1>
+      <p class="tagline">I extract non-Gaussian information from the large-scale structure of the Universe with higher-order clustering statistics, from theory and emulators to the first joint 2PCF + 3PCF analysis of real survey data.</p>
+      <div class="stats">
+        <div class="stat"><b>108</b><small>papers</small></div>
+        <div class="stat"><b>2078</b><small>citations</small></div>
+        <div class="stat"><b>19</b><small>h-index</small></div>
+      </div>
+      <p class="stats-cap">INSPIRE-HEP, October 2026</p>
+      <div class="actions">
+        <a class="btn solid" href="research.html">Research</a>
+        <a class="btn outline" href="publications.html">Publications</a>
+        <div class="icon-links">
+          <a href="mailto:massimo.guidi@unibo.it" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M2 4h20v16H2V4zm2 2v.5l8 5.5 8-5.5V6H4zm16 3.2-7.4 5.1a1 1 0 0 1-1.2 0L4 9.2V18h16V9.2z"/></svg></a>
+          <a href="https://orcid.org/0000-0001-9408-1101" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.6 6.9a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM8.5 10.9v7.1H6.7v-7.1h1.8zm2.2 0h3.4c3.2 0 4.6 2.3 4.6 3.6 0 2-1.6 3.5-4.6 3.5h-3.4v-7.1zm1.8 1.6v3.9h1.5c2 0 2.9-1 2.9-2s-.8-1.9-2.9-1.9h-1.5z"/></svg></a>
+          <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Guidi%2C%20M.%22&sort=date%20desc" target="_blank" rel="noopener" aria-label="ADS" title="NASA ADS"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2zm0 2.2 7.5 3.8L12 11.8 4.5 8 12 4.2zM4 9.6l7 3.5v7.1l-7-3.5V9.6zm9 10.6v-7.1l7-3.5v7.1l-7 3.5z"/></svg></a>
+          <a href="https://github.com/mguidi94" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.2-3.37-1.2-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+          <a href="https://gitlab.com/MGuidi" target="_blank" rel="noopener" aria-label="GitLab" title="GitLab"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <div class="astro">
+        <img class="astro-img" src="assets/flammarion.jpg" alt="Flammarion engraving, L'Atmosphère: Météorologie Populaire, Paris 1888">
+        <svg viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+<g fill="none" stroke="#c4a15a">
+<circle cx="300" cy="300" r="186" stroke-opacity=".55"/>
+<circle cx="300" cy="300" r="200" stroke-opacity=".9"/>
+</g>
+<g class="spin-a" fill="none" stroke="#c4a15a">
+<circle cx="300" cy="300" r="222" stroke-opacity=".7"/><circle cx="300" cy="300" r="246" stroke-opacity=".7"/>
+<line x1="300.0" y1="78.0" x2="300.0" y2="54.0" stroke-opacity="0.95"/>
+<line x1="320.7" y1="62.9" x2="321.4" y2="54.9" stroke-opacity="0.5"/>
+<line x1="341.3" y1="65.6" x2="342.7" y2="57.7" stroke-opacity="0.5"/>
+<line x1="361.6" y1="70.1" x2="363.7" y2="62.4" stroke-opacity="0.5"/>
+<line x1="381.4" y1="76.4" x2="384.1" y2="68.8" stroke-opacity="0.5"/>
+<line x1="400.6" y1="84.3" x2="404.0" y2="77.0" stroke-opacity="0.5"/>
+<line x1="411.0" y1="107.7" x2="423.0" y2="87.0" stroke-opacity="0.95"/>
+<line x1="436.5" y1="105.0" x2="441.1" y2="98.5" stroke-opacity="0.5"/>
+<line x1="453.0" y1="117.7" x2="458.1" y2="111.6" stroke-opacity="0.5"/>
+<line x1="468.3" y1="131.7" x2="473.9" y2="126.1" stroke-opacity="0.5"/>
+<line x1="482.3" y1="147.0" x2="488.4" y2="141.9" stroke-opacity="0.5"/>
+<line x1="495.0" y1="163.5" x2="501.5" y2="158.9" stroke-opacity="0.5"/>
+<line x1="492.3" y1="189.0" x2="513.0" y2="177.0" stroke-opacity="0.95"/>
+<line x1="515.7" y1="199.4" x2="523.0" y2="196.0" stroke-opacity="0.5"/>
+<line x1="523.6" y1="218.6" x2="531.2" y2="215.9" stroke-opacity="0.5"/>
+<line x1="529.9" y1="238.4" x2="537.6" y2="236.3" stroke-opacity="0.5"/>
+<line x1="534.4" y1="258.7" x2="542.3" y2="257.3" stroke-opacity="0.5"/>
+<line x1="537.1" y1="279.3" x2="545.1" y2="278.6" stroke-opacity="0.5"/>
+<line x1="522.0" y1="300.0" x2="546.0" y2="300.0" stroke-opacity="0.95"/>
+<line x1="537.1" y1="320.7" x2="545.1" y2="321.4" stroke-opacity="0.5"/>
+<line x1="534.4" y1="341.3" x2="542.3" y2="342.7" stroke-opacity="0.5"/>
+<line x1="529.9" y1="361.6" x2="537.6" y2="363.7" stroke-opacity="0.5"/>
+<line x1="523.6" y1="381.4" x2="531.2" y2="384.1" stroke-opacity="0.5"/>
+<line x1="515.7" y1="400.6" x2="523.0" y2="404.0" stroke-opacity="0.5"/>
+<line x1="492.3" y1="411.0" x2="513.0" y2="423.0" stroke-opacity="0.95"/>
+<line x1="495.0" y1="436.5" x2="501.5" y2="441.1" stroke-opacity="0.5"/>
+<line x1="482.3" y1="453.0" x2="488.4" y2="458.1" stroke-opacity="0.5"/>
+<line x1="468.3" y1="468.3" x2="473.9" y2="473.9" stroke-opacity="0.5"/>
+<line x1="453.0" y1="482.3" x2="458.1" y2="488.4" stroke-opacity="0.5"/>
+<line x1="436.5" y1="495.0" x2="441.1" y2="501.5" stroke-opacity="0.5"/>
+<line x1="411.0" y1="492.3" x2="423.0" y2="513.0" stroke-opacity="0.95"/>
+<line x1="400.6" y1="515.7" x2="404.0" y2="523.0" stroke-opacity="0.5"/>
+<line x1="381.4" y1="523.6" x2="384.1" y2="531.2" stroke-opacity="0.5"/>
+<line x1="361.6" y1="529.9" x2="363.7" y2="537.6" stroke-opacity="0.5"/>
+<line x1="341.3" y1="534.4" x2="342.7" y2="542.3" stroke-opacity="0.5"/>
+<line x1="320.7" y1="537.1" x2="321.4" y2="545.1" stroke-opacity="0.5"/>
+<line x1="300.0" y1="522.0" x2="300.0" y2="546.0" stroke-opacity="0.95"/>
+<line x1="279.3" y1="537.1" x2="278.6" y2="545.1" stroke-opacity="0.5"/>
+<line x1="258.7" y1="534.4" x2="257.3" y2="542.3" stroke-opacity="0.5"/>
+<line x1="238.4" y1="529.9" x2="236.3" y2="537.6" stroke-opacity="0.5"/>
+<line x1="218.6" y1="523.6" x2="215.9" y2="531.2" stroke-opacity="0.5"/>
+<line x1="199.4" y1="515.7" x2="196.0" y2="523.0" stroke-opacity="0.5"/>
+<line x1="189.0" y1="492.3" x2="177.0" y2="513.0" stroke-opacity="0.95"/>
+<line x1="163.5" y1="495.0" x2="158.9" y2="501.5" stroke-opacity="0.5"/>
+<line x1="147.0" y1="482.3" x2="141.9" y2="488.4" stroke-opacity="0.5"/>
+<line x1="131.7" y1="468.3" x2="126.1" y2="473.9" stroke-opacity="0.5"/>
+<line x1="117.7" y1="453.0" x2="111.6" y2="458.1" stroke-opacity="0.5"/>
+<line x1="105.0" y1="436.5" x2="98.5" y2="441.1" stroke-opacity="0.5"/>
+<line x1="107.7" y1="411.0" x2="87.0" y2="423.0" stroke-opacity="0.95"/>
+<line x1="84.3" y1="400.6" x2="77.0" y2="404.0" stroke-opacity="0.5"/>
+<line x1="76.4" y1="381.4" x2="68.8" y2="384.1" stroke-opacity="0.5"/>
+<line x1="70.1" y1="361.6" x2="62.4" y2="363.7" stroke-opacity="0.5"/>
+<line x1="65.6" y1="341.3" x2="57.7" y2="342.7" stroke-opacity="0.5"/>
+<line x1="62.9" y1="320.7" x2="54.9" y2="321.4" stroke-opacity="0.5"/>
+<line x1="78.0" y1="300.0" x2="54.0" y2="300.0" stroke-opacity="0.95"/>
+<line x1="62.9" y1="279.3" x2="54.9" y2="278.6" stroke-opacity="0.5"/>
+<line x1="65.6" y1="258.7" x2="57.7" y2="257.3" stroke-opacity="0.5"/>
+<line x1="70.1" y1="238.4" x2="62.4" y2="236.3" stroke-opacity="0.5"/>
+<line x1="76.4" y1="218.6" x2="68.8" y2="215.9" stroke-opacity="0.5"/>
+<line x1="84.3" y1="199.4" x2="77.0" y2="196.0" stroke-opacity="0.5"/>
+<line x1="107.7" y1="189.0" x2="87.0" y2="177.0" stroke-opacity="0.95"/>
+<line x1="105.0" y1="163.5" x2="98.5" y2="158.9" stroke-opacity="0.5"/>
+<line x1="117.7" y1="147.0" x2="111.6" y2="141.9" stroke-opacity="0.5"/>
+<line x1="131.7" y1="131.7" x2="126.1" y2="126.1" stroke-opacity="0.5"/>
+<line x1="147.0" y1="117.7" x2="141.9" y2="111.6" stroke-opacity="0.5"/>
+<line x1="163.5" y1="105.0" x2="158.9" y2="98.5" stroke-opacity="0.5"/>
+<line x1="189.0" y1="107.7" x2="177.0" y2="87.0" stroke-opacity="0.95"/>
+<line x1="199.4" y1="84.3" x2="196.0" y2="77.0" stroke-opacity="0.5"/>
+<line x1="218.6" y1="76.4" x2="215.9" y2="68.8" stroke-opacity="0.5"/>
+<line x1="238.4" y1="70.1" x2="236.3" y2="62.4" stroke-opacity="0.5"/>
+<line x1="258.7" y1="65.6" x2="257.3" y2="57.7" stroke-opacity="0.5"/>
+<line x1="279.3" y1="62.9" x2="278.6" y2="54.9" stroke-opacity="0.5"/>
+</g>
+<g class="spin-b" fill="none" stroke="#c4a15a">
+<circle cx="300" cy="300" r="266" stroke-opacity=".45" stroke-dasharray="2 7"/>
+<circle cx="300.0" cy="34.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="433.0" cy="69.6" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="530.4" cy="167.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="566.0" cy="300.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="530.4" cy="433.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="433.0" cy="530.4" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="300.0" cy="566.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="167.0" cy="530.4" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="69.6" cy="433.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="34.0" cy="300.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="69.6" cy="167.0" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+<circle cx="167.0" cy="69.6" r="3.2" fill="#0d1014" stroke-opacity=".9"/>
+</g>
+<text x="300.0" y="20.0" text-anchor="middle">0h</text>
+<text x="584.0" y="304.0" text-anchor="middle">6h</text>
+<text x="300.0" y="588.0" text-anchor="middle">12h</text>
+<text x="16.0" y="304.0" text-anchor="middle">18h</text>
+<circle cx="457.6" cy="176.9" r="4" fill="#c4a15a"/><line x1="457.6" y1="176.9" x2="506.5" y2="138.7" stroke="#c4a15a" stroke-opacity=".7"/>
+<text x="512.5" y="134.7">z = 0.57</text>
+</svg>
+      </div>
+      <figcaption class="astro-credit">C. Flammarion, L'Atmosphère, 1888</figcaption>
+    </figure>
+  </div>
 </header>
 
+<main>
+  <section class="sec reveal">
+    <div class="wrap">
+      <p class="eyebrow">§ 01 · Now</p>
+      <div class="cards">
+        <article class="card"><h3>Euclid Consortium</h3><p>Lead of the Key Project on the joint 2PCF + 3PCF full-shape analysis of Euclid DR1 (since 2026).</p></article>
+        <article class="card"><h3>Wide-field Spectroscopic Telescope</h3><p>Lead of the Quasar and Galaxy Clustering + IGM/Lyman-α work package of the Cosmology Working Group (since 2024).</p></article>
+        <article class="card"><h3>Bologna</h3><p>Postdoctoral researcher with Michele Moresco; co-supervising PhD and MSc theses.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec reveal">
+    <div class="wrap">
+      <p class="eyebrow">§ 02 · Latest</p>
+      <div class="feature">
+        <div>
+          <span class="mono-tag">arXiv:2606.26237</span>
+          <h3>First full-shape joint analysis of the two- and three-point correlation functions on real data: ΛCDM cosmological constraints from BOSS DR12</h3>
+          <p>Guidi, Moresco, Veropalumbo, Cavazzini, Farina, Labate (2026)</p>
+          <div class="tag-row"><a href="https://arxiv.org/abs/2606.26237" target="_blank" rel="noopener">arXiv</a><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260626237G" target="_blank" rel="noopener">ADS</a></div>
+        </div>
+        <figure><svg viewBox="0 0 300 220" role="img" aria-label="Triangle of galaxies with sides r12, r13 and r23" fill="none" stroke="#c4a15a">
+  <polygon points="40,180 250,150 150,30" stroke-width="1.4"/>
+  <g fill="#0d1014" stroke-width="1.4"><circle cx="40" cy="180" r="6"/><circle cx="250" cy="150" r="6"/><circle cx="150" cy="30" r="6"/></g>
+  <g fill="#c4a15a" stroke="none" font-family="IBM Plex Mono, monospace" font-size="13">
+    <text x="130" y="186">r12</text><text x="212" y="82">r23</text><text x="72" y="96">r13</text></g>
+  <path d="M 70 177 A 30 30 0 0 0 66 160" stroke-width="1" stroke-opacity=".7"/>
+</svg></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec reveal">
+    <div class="wrap">
+      <p class="eyebrow">§ 03 · Recent talks</p>
+      <ul class="talk-list">
+<li><time>2 Jul 2026</time><span><span class="t">First full-shape joint analysis of the 2PCF and 3PCF in redshift space on real data</span><span class="v">European Astronomical Society Annual Meeting, Lausanne, Switzerland</span></span></li>
+<li><time>24 Mar 2026</time><span><span class="t">Towards cosmological constraints from the first full-shape joint 2PCF + 3PCF analysis on real data</span><span class="v">Rencontres de Moriond, La Thuile, Italy</span></span></li>
+<li><time>4 Feb 2026</time><span><span class="t">Full-shape joint two-point and three-point clustering statistics in configuration space</span><span class="v">Euclid Galaxy Clustering Science Working Group Meeting, Marseille, France</span></span></li>
+      </ul>
+      <a class="more-link" href="talks.html">All talks →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <h4>Massimo Guidi</h4>
+      <p>Cosmologist, postdoctoral researcher at the University of Bologna.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks &amp; Roles</a>
+      <a href="mentoring.html">Mentoring</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="mono">Set in Cormorant Garamond, Inter &amp; IBM Plex Mono · Engravings: public domain</p>
+  </div>
+  <p class="foot-copy">© 2026 Massimo Guidi</p>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

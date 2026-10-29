@@ -3,39 +3,66 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Massimo Guidi</title>
+<title>Contact · Massimo Guidi</title>
+<meta name="description" content="Get in touch">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav class="topnav static" id="topnav">
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="talks.html">Talks &amp; Roles</a>
-  <a href="mentoring.html">Mentoring</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html" class="current">Contact</a>
+<nav class="topnav" id="topnav" aria-label="Main">
+  <a class="brand" href="index.html"><span class="mono-mark" aria-hidden="true">MG</span><span>Massimo Guidi</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="talks.html">Talks &amp; Roles</a>
+    <a href="mentoring.html">Mentoring</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html" class="current" aria-current="page">Contact</a>
+  </div>
 </nav>
 
-<header class="page-header contact">
-  <h1>Contact</h1>
+<header class="page-hero">
+  <img class="ph-img" src="assets/contact-starchart.jpg" alt="Engraving of a southern star chart">
+  <div class="page-hero-inner">
+    <p class="eyebrow">§ 06 · CONTACT</p>
+    <h1>Contact</h1>
+    <p class="sub">Get in touch</p>
+  </div>
+  <p class="page-credit">Andreas Cellarius, <em>Haemisphaerium Stellatum Australe Antiquum</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
 </header>
-<p class="page-credit">Andreas Cellarius, <em>Haemisphaerium Stellatum Australe Antiquum</em>, <em>Harmonia Macrocosmica</em> (1661)</p>
-<p class="page-subtitle">Get in touch</p>
 
-<main>
-  <section class="reveal visible">
-    <p>massimo.guidi [at] unibo.it</p>
-  </section>
+<main class="page">
+  <div class="wrap narrow">
+    <p class="mailline"><a href="mailto:massimo.guidi@unibo.it">massimo.guidi@unibo.it</a></p>
+    <address class="addr">Department of Physics and Astronomy<br>University of Bologna<br>Via Piero Gobetti 93/2<br>40129 Bologna, Italy</address>
+    <div class="linkcards">
+      <a class="linkcard reveal" href="https://orcid.org/0000-0001-9408-1101" target="_blank" rel="noopener" aria-label="ORCID"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.6 6.9a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM8.5 10.9v7.1H6.7v-7.1h1.8zm2.2 0h3.4c3.2 0 4.6 2.3 4.6 3.6 0 2-1.6 3.5-4.6 3.5h-3.4v-7.1zm1.8 1.6v3.9h1.5c2 0 2.9-1 2.9-2s-.8-1.9-2.9-1.9h-1.5z"/></svg><span><b>ORCID</b><small>0000-0001-9408-1101</small></span></a>
+      <a class="linkcard reveal" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Guidi%2C%20M.%22&sort=date%20desc" target="_blank" rel="noopener" aria-label="ADS"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2zm0 2.2 7.5 3.8L12 11.8 4.5 8 12 4.2zM4 9.6l7 3.5v7.1l-7-3.5V9.6zm9 10.6v-7.1l7-3.5v7.1l-7 3.5z"/></svg><span><b>NASA ADS</b><small>author query</small></span></a>
+      <a class="linkcard reveal" href="https://github.com/mguidi94" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.2-3.37-1.2-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg><span><b>GitHub</b><small>mguidi94</small></span></a>
+      <a class="linkcard reveal" href="https://gitlab.com/MGuidi" target="_blank" rel="noopener" aria-label="GitLab"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></svg><span><b>GitLab</b><small>MGuidi</small></span></a>
+    </div>
+  </div>
 </main>
 
-<footer>
-  <p>Massimo Guidi</p>
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <h4>Massimo Guidi</h4>
+      <p>Cosmologist, postdoctoral researcher at the University of Bologna.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="talks.html">Talks &amp; Roles</a>
+      <a href="mentoring.html">Mentoring</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="mono">Set in Cormorant Garamond, Inter &amp; IBM Plex Mono · Engravings: public domain</p>
+  </div>
+  <p class="foot-copy">© 2026 Massimo Guidi</p>
 </footer>
-
-<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</a>
-
 <script src="script.js"></script>
 </body>
 </html>
