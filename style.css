@@ -564,3 +564,18 @@ html.js .reveal.visible { opacity: 1; transform: none; }
 /* Cormorant runs small: scale the whole rem system up and use lining figures for dates and counts */
 html { font-size: 118%; }
 body { font-variant-numeric: lining-nums; }
+
+/* BOSS DR12 light-cone slice fanning out behind the Flammarion disc */
+.astro svg.cone text { font-size: 10px; fill: var(--brass); fill-opacity: .7; stroke: none; }
+.ph-cone {
+  position: absolute;
+  top: 8%; bottom: 8%; left: 0;
+  width: 40%; height: 84%;
+  object-fit: contain;
+  object-position: 0 50%;
+  z-index: -1;
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to right, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 55%, transparent 100%);
+}
+@media (max-width: 760px) { .ph-cone { display: none; } }
