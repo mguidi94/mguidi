@@ -418,8 +418,11 @@ a:hover { color: var(--ink); }
 svg.ph-img.orrery { filter: none; }
 .orrery image[class] { transform-box: view-box; transform-origin: var(--cx) var(--cy); }
 .orrery .orb-slow { animation: spin 900s linear infinite reverse; }
-.orrery .orb-fast { animation: spin 240s linear infinite reverse; }
 .orrery .orb-sky  { animation: spin 1200s linear infinite; }
+.orrery .orb-roll { animation: spin 1500s linear infinite; }
+.orrery .orb-roll.rev { animation-direction: reverse; }
+.orrery .orb-sight { transform-box: view-box; transform-origin: var(--cx) var(--cy); animation: sight 70s ease-in-out infinite alternate; }
+@keyframes sight { from { transform: rotate(22deg); } to { transform: rotate(40deg); } }
 .page-hero-inner { width: 100%; max-width: 980px; margin: 0 auto; padding: 3rem var(--gutter); }
 .page-hero h1 {
   font-family: var(--f-display);
