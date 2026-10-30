@@ -414,6 +414,12 @@ a:hover { color: var(--ink); }
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%);
   mask-image: linear-gradient(to right, transparent 0%, #000 55%);
 }
+/* engravings whose spheres turn: tint is baked into the *-brass.jpg files */
+svg.ph-img.orrery { filter: none; }
+.orrery image[class] { transform-box: view-box; transform-origin: var(--cx) var(--cy); }
+.orrery .orb-slow { animation: spin 900s linear infinite reverse; }
+.orrery .orb-fast { animation: spin 240s linear infinite reverse; }
+.orrery .orb-sky  { animation: spin 1200s linear infinite; }
 .page-hero-inner { width: 100%; max-width: 980px; margin: 0 auto; padding: 3rem var(--gutter); }
 .page-hero h1 {
   font-family: var(--f-display);
